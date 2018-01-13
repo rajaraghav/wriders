@@ -18,7 +18,6 @@
     "node-sass": "^4.7.2"
   },
   "dependencies": {
-    "nodemon": "^1.14.11",
     "sass-watch": "^0.1.0"
   }
 }
