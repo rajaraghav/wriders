@@ -1,0 +1,20 @@
+{
+  "name": "starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compilesass": "node-sass sass/main.scss css/style.css",
+    "watchCompile-sass": "nodemon -e scss -x \"npm run compilesass\""
+  },
+  "author": "raja",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.7.2"
+  },
+  "dependencies": {
+    "nodemon": "^1.14.11",
+    "sass-watch": "^0.1.0"
+  }
+}
