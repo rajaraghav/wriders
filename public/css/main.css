@@ -199,6 +199,48 @@ body {
   background-color: #fff;
 }
 
+.composition {
+  position: absolute;
+}
+
+.composition__photo {
+  width: 49.5%;
+  box-shadow: 0 0.1rem 0.8rem black;
+  border-radius: 0.2rem;
+  position: relative;
+}
+
+.composition__photo--p1 {
+  left: 2rem;
+  top: -5rem;
+  border: transparent solid 1px;
+  transition: 0.2s;
+}
+
+.composition__photo--p2 {
+  right: 2rem;
+  top: 4rem;
+  transition: 0.2s;
+}
+
+.composition__photo--p3 {
+  left: 7rem;
+  top: -7rem;
+  transition: 0.2s;
+}
+
+.composition__photo:hover {
+  transform: scale(1.1);
+  outline: #f7b733 solid 1rem;
+  outline-offset: 2rem;
+  box-shadow: 0 0.1rem 1rem black;
+  z-index: 11;
+}
+
+.composition:hover .composition__photo:not(:hover) {
+  transform: scale(0.9);
+}
+
 .section-about {
   background-color: #e6e6e6;
   height: 100%;
