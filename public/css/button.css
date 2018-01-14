@@ -1,0 +1,50 @@
+.btn:visited, .btn:link {
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.3rem;
+  display: inline-block;
+  position: relative;
+}
+
+.btn:hover {
+  transform: translateY(-0.2rem);
+  box-shadow: 0 1rem 2rem rgba(0, 4, 7, 0.205);
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.5);
+  opacity: 0;
+}
+
+.btn:active {
+  transform: translateY(0.1rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 4, 7, 0.205);
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 3rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn--intro {
+  background-color: white;
+  color: #777;
+  padding: 2rem;
+  border-radius: 3rem;
+  transition: all 0.2;
+  animation: moveFromBottomButton 0.5s 2s;
+  animation-fill-mode: backwards;
+}
+
+.btn--intro::after {
+  background-color: #fff;
+}
+/*# sourceMappingURL=button.css.map */

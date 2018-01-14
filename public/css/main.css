@@ -1,0 +1,290 @@
+*,
+*::after,
+*::before {
+  margin: 0rem;
+  padding: 0rem;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "lago", sans-serif;
+  font-size: 1.6rem;
+  color: #777;
+  line-height: 1.7;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-10rem);
+  }
+  80% {
+    transform: translateY(0.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+  80% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveFromBottomButton {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.heading-primary {
+  color: white;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+}
+
+.heading-primary--main {
+  display: block;
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 3rem;
+  animation-name: moveFromTop;
+  animation-duration: 2s;
+}
+
+.heading-primary--sub {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 100;
+  letter-spacing: 1rem;
+  animation-name: moveFromBottom;
+  animation-duration: 2s;
+  margin-bottom: 1.6rem;
+}
+
+.heading-secondary {
+  color: #fff;
+  font-size: 3.5rem;
+  font-weight: 100;
+  text-transform: capitalize;
+  display: inline-block;
+  background-image: -moz-linear-gradient(to right, #f7b733, #fc4a1a);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  transition: 0.2s;
+}
+
+.heading-secondary:hover {
+  transform: skewX(15deg) skewY(3deg) scale(1.1);
+  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.heading-tertiary {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.paragraph {
+  font-size: 1.6rem;
+}
+
+.paragraph:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.learn-more {
+  padding: 0.5rem;
+  letter-spacing: 0.1rem;
+  font-size: 1.6rem;
+}
+
+.learn-more:visited, .learn-more:link {
+  color: #fc4a1a;
+}
+
+.learn-more:hover {
+  color: white;
+  background-color: #f0cb35;
+}
+
+.u-center-text {
+  text-align: center;
+}
+
+.u-margin-bottom-huge {
+  margin-bottom: 8rem;
+}
+
+.btn:visited, .btn:link {
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.3rem;
+  display: inline-block;
+  position: relative;
+}
+
+.btn:hover {
+  transform: translateY(-0.2rem);
+  box-shadow: 0 1rem 2rem rgba(0, 4, 7, 0.205);
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.5);
+  opacity: 0;
+}
+
+.btn:active {
+  transform: translateY(0.1rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 4, 7, 0.205);
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 3rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn--intro {
+  background-color: white;
+  color: #777;
+  padding: 2rem;
+  border-radius: 3rem;
+  transition: all 0.2;
+  animation: moveFromBottomButton 0.5s 2s;
+  animation-fill-mode: backwards;
+}
+
+.btn--intro::after {
+  background-color: #fff;
+}
+
+.section-about {
+  background-color: #e6e6e6;
+  height: 100%;
+  z-index: 1;
+  margin-top: -25vh;
+  padding: 25rem 0;
+  clip-path: polygon(0 -300px, 100% 0, 100% 100%, 0 100%);
+}
+
+.header {
+  height: 100vh;
+  z-index: 2;
+  background-image: linear-gradient(to right bottom, rgba(240, 203, 53, 0.7), rgba(192, 36, 37, 0.8)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75vh);
+}
+
+.header__logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+
+.header__logo {
+  height: 3.5rem;
+}
+
+.header__bike-icon {
+  display: block;
+  text-align-last: center;
+  animation: moveInLeft 2s ease-out;
+}
+
+.header__text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.row {
+  max-width: 1024px;
+  display: block;
+  margin: 0 auto;
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.row:not(:last-child) {
+  margin-bottom: 8rem;
+}
+
+.row [class^="col-"] {
+  overflow: auto;
+  float: left;
+}
+
+.row [class^="col-"]:not(:last-child) {
+  margin-right: 6rem;
+}
+
+.row .col-1-of-2 {
+  width: calc((100% - 6rem) / 2);
+}
+
+.row .col-1-of-3 {
+  width: calc((100% - 2 * 6rem) / 3);
+}
+
+.row .col-2-of-3 {
+  width: calc( 2 * ((100% - 2 * 6rem) /3) + 6rem);
+}
+
+.row .col-1-of-4 {
+  width: calc((100% - 3 * 6rem) / 4);
+}
+
+.row .col-2-of-4 {
+  width: calc( 2 * ((100% - 3 * 6rem) / 4) + 6rem);
+}
+
+.row .col-3-of-4 {
+  width: calc( 3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem);
+}
+/*# sourceMappingURL=main.css.map */
