@@ -9,4 +9,4 @@ app.use(express.static(path.join(__dirname, "public")));
 app.get("/", function(req, res) {
   res.render("index");
 });
-app.listen(process.env.port || 4000);
+app.listen(process.env.PORT || 4000);
