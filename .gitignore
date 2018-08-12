@@ -2,3 +2,4 @@
 nn.html
 .*
 !/.gitignore
+node_modules
